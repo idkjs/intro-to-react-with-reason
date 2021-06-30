@@ -1,5 +1,5 @@
 [@react.component]
-let component = () =>
+let make = () =>
   <header className="flex flex-grow flex-wrap items-center m-4">
     <Link title="Intro" href="/intro" className="hover:text-gray-500 text-xs uppercase mr-4">
       "Intro"->Utils.str

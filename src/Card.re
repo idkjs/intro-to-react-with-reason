@@ -1,5 +1,5 @@
 [@react.component]
-let component =
+let make =
     (
       ~src: string,
       ~alt: string,

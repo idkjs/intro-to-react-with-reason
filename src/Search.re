@@ -90,7 +90,7 @@ type action =
   | KeyDown(int);
 
 [@react.component]
-let component = (~username: string="") => {
+let make = (~username: string="") => {
   let (inputValue: string, setInputValue) = React.useState(() => username);
 
   let (state, dispatch) =

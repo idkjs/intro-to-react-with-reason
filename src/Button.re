@@ -12,7 +12,7 @@ let classNameOfCategory = category =>
   );
 
 [@react.component]
-let component =
+let make =
     (
       ~onClick=_ => (),
       ~title: string,
@@ -21,5 +21,5 @@ let component =
       ~category=SECONDARY,
       ~type_="button",
     ) => {
-  <button onClick className={category |> classNameOfCategory} title disabled> children </button>;
+  <button type_ onClick className={category |> classNameOfCategory} title disabled> children </button>;
 };

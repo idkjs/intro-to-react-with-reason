@@ -3,7 +3,7 @@
  */
 
 [@react.component]
-let component = () =>
+let make = () =>
   <div className="container">
     <h1 className="text-lg"> "Crash course"->Utils.str </h1>
     <hr />

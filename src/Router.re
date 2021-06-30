@@ -2,13 +2,13 @@
 let make = () => {
   let url = ReasonReactRouter.useUrl();
   <>
-    <Header.component />
+    <Header />
     <main className="container px-4">
       {switch (url.path) {
-       | ["intro"] => <Intro.component />
-       | ["cards"] => <Cards.component />
-       | ["login"] => <Login.component />
-       | ["search"] => <Search.component username={url.search} />
+       | ["intro"] => <Intro />
+       | ["cards"] => <Cards />
+       | ["login"] => <Login />
+       | ["search"] => <Search username={url.search} />
        | ["vanilla-react"] when url.search !== "" =>
          <AlertContainer> <Alert _type="success" message={url.search} /> </AlertContainer>
        | ["vanilla-react"] =>

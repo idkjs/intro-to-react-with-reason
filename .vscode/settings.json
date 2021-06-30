@@ -1,4 +1,7 @@
 {
   "editor.formatOnSave": true,
-  "reason_language_server.format_width": 120
+  "ocaml.sandbox": {
+    "kind": "opam",
+    "switch": "4.06.1"
+  }
 }

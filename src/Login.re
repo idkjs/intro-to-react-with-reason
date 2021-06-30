@@ -15,7 +15,7 @@ let stringToLoginError = str =>
   };
 
 [@react.component]
-let component = () => {
+let make = () => {
   let (email, setEmail) = React.useState(() => "");
   let (password, setPassword) = React.useState(() => "");
   let (error, setError) = React.useState(() => None);
@@ -39,7 +39,7 @@ let component = () => {
     Js.Dict.set(payload, "password", Js.Json.string(password));
     Js.Promise.(
       Request.post(loginUrl, payload)
-      |> then_(res =>
+      |> then_(_res =>
            {
              alert("Login successful!");
              setError(_ => None);
@@ -76,7 +76,7 @@ let component = () => {
          | _ => React.null
          }}
       </div>
-      <Button.component title="Login" category=Button.PRIMARY> "Login"->React.string </Button.component>
+      <Button title="Login" category=Button.PRIMARY> "Login"->React.string </Button>
     </form>
   </div>;
 };

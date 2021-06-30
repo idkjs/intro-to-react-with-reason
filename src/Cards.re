@@ -19,7 +19,7 @@ type action =
   | CartCheckout;
 
 [@react.component]
-let component = () => {
+let make = () => {
   let initialState = {
     cart: [],
     products: [
@@ -55,7 +55,7 @@ let component = () => {
     <div className="product-grid m-4">
       {state.products
        |> List.map(({id, title, src, price}) =>
-            <Card.component
+            <Card
               alt="Lorem"
               ctas=["First", "Second"]
               handleOnClick={_ => onClick(id)}
