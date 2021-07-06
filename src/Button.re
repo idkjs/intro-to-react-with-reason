@@ -16,7 +16,7 @@ let make =
     (
       ~onClick=_ => (),
       ~title: string,
-      ~children: ReasonReact.reactElement,
+      ~children: React.element,
       ~disabled=false,
       ~category=SECONDARY,
       ~type_="button",
